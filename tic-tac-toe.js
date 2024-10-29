@@ -52,7 +52,17 @@ document.addEventListener(`DOMContentLoaded`,() => {
                 }  
             }
         });
-    });
+
+        square.addEventListener('mouseover', () => {
+            if (!square.textContent && !gameOver) {
+              square.classList.add('hover');
+            }
+          });
+      
+          square.addEventListener('mouseout', () => {
+            square.classList.remove('hover');
+          });
+        });
 
     newGameButton.addEventListener('click',resetGame);
 });
